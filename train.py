@@ -53,8 +53,8 @@ parser.add_argument('--num_workers', type=int, default=8, metavar='N',
                     help='number of workers for the dataloader')
 parser.add_argument('--charge_power', type=int, default=2, metavar='N',
                     help='maximum power to take into one-hot features')
-parser.add_argument('--dataset_paper', type=str, default="cormorant", metavar='N',
-                    help='cormorant, lie_conv')
+parser.add_argument('--datadir', type=str, default="cormorant", metavar='N',
+                    help='')
 parser.add_argument('--node_attr', type=int, default=1, metavar='N',
                     help='node_attr or not')
 parser.add_argument('--weight_decay', type=float, default=1e-16, metavar='N',
@@ -185,8 +185,8 @@ if __name__ == "__main__":
     train_param = {'rmse': [], 'r2': []}
     test_param = {'rmse': [], 'r2': []}
 
-    print(args.datadir)
-    args, datasets = initialize_datasets(args, args.datadir, 'new_sdf')
+    print(arg.datadir)
+    args, datasets = initialize_datasets(args, arg.datadir, 'new_sdf')
     kf = KFold(n_splits=10)
     data = {}
     dataset_k = {}
