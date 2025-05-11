@@ -14,9 +14,10 @@ python test_data_utils.py
 
 ## How to use our model
 
+
 If you want to use ChargeNet predict molecule
 ```
-python predict.py --charge_type resp
+sbatch predict.slurm
 ```
 
 ## How to use train our model
@@ -24,4 +25,6 @@ If you want to train ChargeNet
 
 ```
 python train.py --data_path {npz_data}
+or
+sbatch train.slurm
 ```
