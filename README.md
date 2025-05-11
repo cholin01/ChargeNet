@@ -2,13 +2,26 @@
 
 ![Charge图](https://github.com/user-attachments/assets/1484eb9a-e9c9-4ab5-917b-2b221b36c95f)
 
+## How to create environment
+```
+conda create -n ChargeNet python==3.10
+pip install -f requirements.txt
+```
+## Data Prepartion
+```
+python test_data_utils.py
+```
+
+## How to use our model
+
 If you want to use ChargeNet predict molecule
 ```
 python predict.py --charge_type resp
 ```
 
+## How to use train our model
 If you want to train ChargeNet
 
 ```
-python train.py
+python train.py --data_path {npz_data}
 ```
