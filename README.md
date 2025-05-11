@@ -21,7 +21,7 @@ sbatch predict.slurm
 ```
 
 ## How to use train our model
-If you want to train ChargeNet
+If you want to train ChargeNet. The train.log has been uploaded to ./run_data.
 
 ```
 python train.py --data_path {npz_data}
